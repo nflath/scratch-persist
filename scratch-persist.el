@@ -55,8 +55,8 @@
                                                nil))
   ;;; Reload the *scratch* buffer from file
     (erase-buffer)
-    (if (file-exists-p scratch-file) (insert-file scratch-file))
-    (setq buffer-file-name scratch-file)
+    (if (file-exists-p scratch-persist-file) (insert-file scratch-persist-file))
+    (setq buffer-file-name scratch-persist-file)
     (setq default-directory "~/.emacs.d")
     (save-buffer)))
 (scratch-persist-mode)
