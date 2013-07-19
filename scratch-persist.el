@@ -46,17 +46,17 @@
   (save-excursion
     (set-buffer (get-buffer-create "*scratch*"))
     (lisp-interaction-mode)
-  ;;; Prevent the *scratch* buffer from ever being killed
+ ;;; Prevent the *scratch* buffer from ever being killed
     (make-local-variable 'kill-buffer-query-functions)
     (add-hook 'kill-buffer-query-functions #'(lambda ()
                                                (if (eq (current-buffer) (get-buffer-create "*scratch*"))
                                                    (bury-buffer)
                                                  (bury-buffer (get-buffer-create "*scratch*")))
                                                nil))
-  ;;; Reload the *scratch* buffer from file
+ ;;; Reload the *scratch* buffer from file
     (erase-buffer)
-    (if (file-exists-p scratch-file) (insert-file scratch-file))
-    (setq buffer-file-name scratch-file)
+    (if (file-exists-p scratch-persist-file) (insert-file scratch-persist-file))
+    (setq buffer-file-name scratch-persist-file)
     (setq default-directory "~/.emacs.d")
     (save-buffer)))
 (scratch-persist-mode)
