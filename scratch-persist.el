@@ -4,7 +4,7 @@
 
 ;; Author: Nathaniel Flath <nflath@gmail.com>
 ;; URL: http://github.com/nflath/scratch-persist
-;; Version: 1.0
+;; Version: 1.1
 
 ;; This file is not part of GNU Emacs.
 
