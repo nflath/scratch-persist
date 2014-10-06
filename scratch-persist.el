@@ -4,7 +4,7 @@
 
 ;; Author: Nathaniel Flath <nflath@gmail.com>
 ;; URL: http://github.com/nflath/scratch-persist
-;; Version: 1.1
+;; Version: 1.2
 
 ;; This file is not part of GNU Emacs.
 
@@ -38,7 +38,7 @@
 ;;; Code:
 
 
-(defvar scratch-persist-file "~/.emacs.d/scratch.el"
+(defvar scratch-persist-file (concat user-emacs-directory "scratch.el")
   "Location the *scratch* buffer is saved to.")
 
 (defun scratch-persist-mode ()
